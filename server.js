@@ -4,7 +4,7 @@ const fetch = require("node-fetch");
 const cors = require("cors");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000; // ✅ Use Render’s dynamic port
 
 app.use(cors());
 app.use(express.json());
@@ -89,6 +89,7 @@ app.post("/fetchExplanation", async (req, res) => {
     }
 });
 
-app.listen(PORT, () => {
-    console.log(`🚀 Server running on http://localhost:${PORT}`);
+// ✅ Allow external access by listening on 0.0.0.0
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`🚀 Server running on port ${PORT}`);
 });
