@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extension Settings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #status {
+            margin-top: 10px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h2>API Key Settings</h2>
+    <label for="apiKey">Enter your OpenAI API Key:</label>
+    <input type="text" id="apiKey" placeholder="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">
+    <button id="save">Save API Key</button>
+    <p id="status"></p>
+
+    <script src="options.js"></script>
+</body>
+</html>

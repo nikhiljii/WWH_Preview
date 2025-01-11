@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Hyperlink Explainer",
+    "version": "1.0",
+    "description": "Hover over hyperlinks to get AI-generated explanations (What, Why, How).",
+    "permissions": ["storage", "scripting", "activeTab"],
+    "host_permissions": ["https://*/*", "http://*/*"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "css": ["styles.css"],
+        "run_at": "document_end"
+      }
+    ],
+    "options_page": "options.html"
+  }
+  
