@@ -11,7 +11,7 @@ async function fetchExplanationFromServer(text, sendResponse) {
     try {
         console.log("📡 [DEBUG] Sending request to proxy server...");
 
-        const response = await fetch("http://localhost:3000/fetchExplanation", {
+        const response = await fetch("https://wwh-preview.onrender.com/fetchExplanation", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ text })
