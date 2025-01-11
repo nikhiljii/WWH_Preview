@@ -27,17 +27,17 @@ app.post("/fetchExplanation", async (req, res) => {
         }
 
         const prompt = `
-        Analyze this issue:
+        Summarize the following issue in a structured format:
         "${userText}"
-        ---
-        What: [Concise issue summary]
-        Why: [Reasons behind the issue]
-        How: [Mechanisms/processes involved]
+        
+        - **What:** Provide a concise, 1-2 sentence summary.
+        - **Why:** Explain the key cause in 2 sentences.
+        - **How:** Describe how it happens in 2-3 sentences.
         ---
         Please provide a structured response in plain text without markdown formatting:
-        What: [Concise summary]
-        Why: [Explain why this happens]
-        How: [Explain how this works]
+        What: [Brief explanation]
+        Why: [Briefly why this happens]
+        How: [Briefly how this works]
         `;
 
         const requestBody = {
