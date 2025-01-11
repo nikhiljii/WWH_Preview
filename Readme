@@ -1,0 +1,89 @@
+WWH GPT-4o Chrome Extension - Beta Testing Guide
+
+📌 Overview
+
+This Chrome extension provides AI-generated explanations in a "What, Why, How" format when you hover over hyperlinks. The backend is hosted on Render, allowing real-time AI responses.
+
+🚀 How to Install & Test the Extension
+
+Follow these steps to install and test the extension.
+
+1️⃣ Download the Extension
+
+Download the latest ZIP file of the extension.
+
+Extract the folder to a location on your computer.
+
+2️⃣ Load the Extension in Chrome
+
+Open Google Chrome.
+
+Go to chrome://extensions/ in the address bar.
+
+Enable Developer Mode (top right corner).
+
+Click "Load unpacked".
+
+Select the extracted extension folder.
+
+✅ Now the extension is installed!
+
+3️⃣ Test the Extension
+
+Open any webpage that contains hyperlinks.
+
+Hover over a hyperlink – a small popup should appear showing:
+
+What the issue is.
+
+Why it happens.
+
+How it works.
+
+If the tooltip doesn't appear, try:
+
+Refreshing the page.
+
+Checking Chrome DevTools (F12 → Console for errors).
+
+Reloading the extension (chrome://extensions/ → Reload).
+
+✅ You should now see the AI-generated explanations!
+
+4️⃣ How the AI Works (For Developers & Debugging)
+
+The extension sends requests to the backend API hosted on Render.
+
+The backend URL: https://wwh-preview.onrender.com/fetchExplanation
+
+API response structure:
+
+{
+  "explanation": "What: ...\nWhy: ...\nHow: ..."
+}
+
+If testing manually, run:
+
+curl -X POST "https://wwh-preview.onrender.com/fetchExplanation" \
+     -H "Content-Type: application/json" \
+     -d '{"text": "Test AI query"}'
+
+5️⃣ Reporting Issues & Feedback
+
+If you face any issues, please:
+
+Open Chrome DevTools (F12) → Console to check for errors.
+
+Report issues with screenshots/logs.
+
+Provide feedback on response accuracy and usability.
+
+🎯 Summary
+
+✅ Downloaded & Installed the Extension
+✅ Hovered Over Links to See AI Explanations
+✅ Checked for Errors if Tooltip Doesn't Show
+✅ Reported Feedback to Improve the Extension
+
+🚀 Thank you for testing! Let us know if you encounter any issues. 🎉
+
