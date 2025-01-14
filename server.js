@@ -31,7 +31,7 @@ app.post("/fetchExplanation", async (req, res) => {
         "${userText}"
         - **What:** Provide a concise brief summary 1-2 sentences.
         - **Why:** Why it matters,provide the key cause in 1-2 sentences.
-        - **How:** Sequence of events or context in 2-3 sentences.
+        - **How:** Sequence of events or context in 1-2 sentences.
         ---
         Summarize the following news article into three structured sections. 
         Return the response **exactly** in this format:
