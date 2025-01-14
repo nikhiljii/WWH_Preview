@@ -36,13 +36,13 @@ app.post("/fetchExplanation", async (req, res) => {
         Summarize the following news article into three structured sections. 
         Return the response **exactly** in this format:
 
-        **What happened?**
+        **What:**
         [Brief summary]
 
-        **Why is this important?**
+        **Why:**
         [Why it matters]
 
-        **How did it happen?**
+        **How:**
         [Sequence of events or context]
         `;
 
