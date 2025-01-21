@@ -1,33 +1,51 @@
+/* content.css (or wherever your extension injects tooltip styles) */
+
+/* 
+   The entire tooltip is now one dark container with a gold left border.
+   We'll set a max-height and overflow-y: auto so there's ONE scrollbar 
+   for all content.
+*/
 .hyperlink-tooltip {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.85);
-    color: white;
-    padding: 12px;
-    border-radius: 6px;
-    font-size: 14px;
-    max-width: 350px;
-    line-height: 1.6;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-    z-index: 9999;
+  position: absolute;
+  z-index: 999999;
+
+  /* Width and height constraints to keep it from expanding too much */
+  max-width: 500px; /* or 300px, per your preference */
+  /* max-height: 250px; /* how tall before scrolling is needed
+  overflow-y: auto; single scrollbar for entire content */
+
+  background: #2c2c2c; /* dark gray background for the entire tooltip */
+  border-left: 6px solid #fbbc04; /* gold left border */
+  border-radius: 4px;
+  padding: 10px; /* some padding for nice spacing */
+  box-sizing: border-box;
 }
 
-.tooltip-section {
-    margin-bottom: 8px;
-    padding: 5px;
-    border-left: 4px solid #ffa500;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 4px;
+/* 
+    Instead of each segment having its own background/border, 
+    we can just do a simpler segmented layout by spacing them. 
+  */
+.aih-segment {
+  margin-bottom: 8px;
+  /* No background or border-left here, 
+       because the entire tooltip is 1 card. */
 }
 
-.tooltip-section b {
-    display: block;
-    font-size: 15px;
-    color: #ffcc00;
-    margin-bottom: 2px;
+.aih-segment:last-child {
+  margin-bottom: 0;
 }
 
-.tooltip-section span {
-    font-size: 13px;
-    color: #ffffff;
-    display: block;
+/* Gold heading, slightly larger/bolder */
+.aih-heading {
+  color: #fbbc04;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+/* White text for the body */
+.aih-body {
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.3;
 }
